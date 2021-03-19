@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nathan/Documents/dev/school-of-code/hackathons/week-11/back-end/back-end.csproj": {}
+    "C:\\bootcampSchoolOfCode\\Projects\\19_03_21\\w11d5_levelupathon_hackathon-room9-allstars_whackitin\\back-end\\back-end.csproj": {}
   },
   "projects": {
-    "/Users/nathan/Documents/dev/school-of-code/hackathons/week-11/back-end/back-end.csproj": {
+    "C:\\bootcampSchoolOfCode\\Projects\\19_03_21\\w11d5_levelupathon_hackathon-room9-allstars_whackitin\\back-end\\back-end.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nathan/Documents/dev/school-of-code/hackathons/week-11/back-end/back-end.csproj",
+        "projectUniqueName": "C:\\bootcampSchoolOfCode\\Projects\\19_03_21\\w11d5_levelupathon_hackathon-room9-allstars_whackitin\\back-end\\back-end.csproj",
         "projectName": "back-end",
-        "projectPath": "/Users/nathan/Documents/dev/school-of-code/hackathons/week-11/back-end/back-end.csproj",
-        "packagesPath": "/Users/nathan/.nuget/packages/",
-        "outputPath": "/Users/nathan/Documents/dev/school-of-code/hackathons/week-11/back-end/obj/",
+        "projectPath": "C:\\bootcampSchoolOfCode\\Projects\\19_03_21\\w11d5_levelupathon_hackathon-room9-allstars_whackitin\\back-end\\back-end.csproj",
+        "packagesPath": "C:\\Users\\Silvia\\.nuget\\packages\\",
+        "outputPath": "C:\\bootcampSchoolOfCode\\Projects\\19_03_21\\w11d5_levelupathon_hackathon-room9-allstars_whackitin\\back-end\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nathan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Silvia\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -38,6 +38,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -61,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
