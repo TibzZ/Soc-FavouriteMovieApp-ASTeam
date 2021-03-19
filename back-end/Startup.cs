@@ -29,6 +29,16 @@ namespace back_end
             services.AddTransient<IRepository<Movie>, MovieRepository>(); //hell
 
             services.AddControllers();
+
+            services.AddCors(options =>
+                {
+                    options.AddDefaultPolicy(
+                        builder =>
+                        {
+                            builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+                        });
+                });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "back_end", Version = "v1" });
@@ -48,6 +58,8 @@ namespace back_end
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 
