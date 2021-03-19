@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace back_end.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]s")]
     public class MovieController : ControllerBase
     {
     private readonly IRepository<Movie> _movieRepository;
