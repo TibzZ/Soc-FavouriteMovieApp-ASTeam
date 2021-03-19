@@ -1,39 +1,41 @@
-import './App.css';
-import useGetMovies from "../../hooks/UseGetMovies";
-import Button from "../Button";
+import { useAuth0 } from '@auth0/auth0-react';
+import React, { useState } from 'react';
+import useGetMovies from '../../hooks/UseGetMovies';
+import Button from '../Button';
+import FilmList from '../FilmList';
+import HomePage from '../HomePage';
 import SearchInput from '../SearchInput';
-import React, {useState, useContext} from 'react';
-import FilmList from "../FilmList"
-
+import './App.css';
 
 function App() {
-  
-  const [search, setSearch] = useState("");
-  //const [data, setData] = useState("");
+	const [ search, setSearch ] = useState('');
+	//const [data, setData] = useState("");
+	const { user, isAuthenticated, isLoading } = useAuth0();
 
-  const data = useGetMovies(search)
+	const data = useGetMovies(search);
 
-  console.log("from the App:");
-  console.log(data);
+	console.log('from the App:');
+	console.log(data);
 
-  function onClick() {
+	function onClick() {
+		throw Error();
+	}
 
-    throw Error();
+	return (
+		<div>
+			{isAuthenticated && (
+				<div className='App'>
+					{' '}
+					<Button name={'Add Movie'} onClick={onClick} />
+					<Button name={'Save Movie'} onClick={onClick} />
+					<SearchInput setValue={setSearch} />
+					<FilmList data={data} />
+				</div>
+			)}
 
-  }
- 
-
-  
-  return (
-    <div className="App">
-    <Button name={"Add Movie"} onClick={onClick}/>
-    <Button name={"Save Movie"} onClick={onClick}/>
-    
-    <SearchInput setValue={setSearch} />
-    <FilmList data={data}/>
-
-    </div>
-  );
+			<HomePage />
+		</div>
+	);
 }
 
 export default App;
