@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 public interface IRepository<T>
 {
     Task<IEnumerable<T>> GetAll();
-    Task Delete(long id);
-    Task<T> Get(long id);
-    Task<T> Update(T t);
+    Task<T> Get(int id);
     Task<T> Insert(T t);
+
 }

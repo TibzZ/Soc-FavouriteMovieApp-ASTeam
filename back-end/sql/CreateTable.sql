@@ -1,4 +1,14 @@
---- Table used
+--- Simplest implementation ( single user by database )
+CREATE TABLE Movies (
+    Id SERIAL PRIMARY KEY,
+    Title VARCHAR(100),
+    IMG VARCHAR(100),
+    Rating INT,
+    Comments TEXT
+);
+
+
+--- Hybrid table
 CREATE TABLE Movies (
     Id SERIAL PRIMARY KEY,
     UserID INT,
@@ -9,7 +19,7 @@ CREATE TABLE Movies (
     Comments TEXT
 );
 
--- Original table proposed
+-- Original table proposed ( multiple users etc)
 CREATE TABLE Movies (
     Id SERIAL PRIMARY KEY,
     UserID SECONDARY KEY NOT NULL,
