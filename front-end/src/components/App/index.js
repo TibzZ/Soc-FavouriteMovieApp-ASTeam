@@ -4,12 +4,14 @@ import Button from "../Button";
 import SearchInput from '../SearchInput';
 import React, {useState, useContext} from 'react';
 import FilmList from "../FilmList"
-
+import { useAuth0 } from "@auth0/auth0-react";
+import HomePage from '../HomePage';
 
 function App() {
   
   const [search, setSearch] = useState("");
   //const [data, setData] = useState("");
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
   const data = useGetMovies(search)
 
@@ -17,24 +19,27 @@ function App() {
   console.log(data);
 
   function onClick() {
-
     throw Error();
-
   }
  
-
   
   return (
-    <div className="App">
-      
+<div>
+    
+    {isAuthenticated && (
+    <div className="App">  
     <Button name={"Add Movie"} onClick={onClick}/>
     <Button name={"Save Movie"} onClick={onClick}/>
     
     <SearchInput value={search} setValue={setSearch} />
     <FilmList data={data}/>
-
+    
     </div>
-  );
+    )}
+      
+    <HomePage/>
+</div>
+  )
 }
 
 export default App;
