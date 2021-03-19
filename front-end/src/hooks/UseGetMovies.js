@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 
-async function useGetMovies(search) {
+function useGetMovies(search) {
     const searchString = search.replace(" ", "%20");
     const [data, setData] = useState([]);
 
     async function getData(){
-        if (data === null) {
             const response = await fetch(`https://imdb8.p.rapidapi.com/auto-complete?q=${searchString}`, {
-                "method": "GET",
-                "headers": {
+                method: "GET",
+                datatype: "jsonp",  //added jsonp
+                headers: {
                     "x-rapidapi-key": process.env.REACT_APP_X_RAPID_API_KEY,
                     "x-rapidapi-host": process.env.REACT_APP_X_RAPID_API_HOST
                 }
@@ -18,16 +18,13 @@ async function useGetMovies(search) {
             console.log(resData);
             setData(resData.d)
             console.log(data)
-        }
+        
 
         }
         useEffect(() => getData(), [search]);
     
         return data;
 }
-
-
-  
 
 
 export default useGetMovies;

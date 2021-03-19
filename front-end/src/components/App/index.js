@@ -13,6 +13,9 @@ function App() {
 
   const data = useGetMovies(search)
 
+  console.log("from the App:");
+  console.log(data);
+
   function onClick() {
 
     throw Error();
