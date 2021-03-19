@@ -1,0 +1,19 @@
+.loginButton {
+        box-shadow: 3px 4px 0px 0px #247c7d;
+        background:linear-gradient(to bottom, #d6847c 5%, #c2817c 100%);
+        background-color:#d6847c;
+        border-radius:10px;
+        border:1px solid #702924;
+        display:inline-block;
+        cursor:pointer;
+        color:#4d194d;
+        font-family:Arial;
+        font-size:17px;
+        padding:7px 25px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #85312b;
+    }
+.loginButton:hover {
+        background:linear-gradient(to bottom, #c2817c 5%, #d6847c 100%);
+        background-color:#c2817c;
+}

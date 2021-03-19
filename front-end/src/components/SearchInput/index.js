@@ -1,9 +1,25 @@
-import React from 'react'
+import React from 'react';
 
-function SearchInput() {
+function SearchInput({setValue}) {
+    let timeout = null;
+
+    function onChange(e){
+       // Clear the timeout if it has already been set.
+      clearTimeout(timeout);
+
+    // Make a new timeout set to go off in 500ms (.5 second)
+    timeout = setTimeout(function () {
+        setValue(e.target.value);
+    }, 500);
+    }
+    
     return (
-        
-    )
+      <>
+
+        <input type="text" placeholder="Search a Movie" onChange={(e) => onChange(e)}/>    
+
+      </>
+    );
 }
 
-export default SearchInput
+export default SearchInput;

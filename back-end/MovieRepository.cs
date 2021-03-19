@@ -28,8 +28,11 @@ public class MovieRepository : BaseRepository, IRepository<Movie>
     public async Task<Movie> Insert(Movie Movie)
     {
         using var connection = CreateConnection();
+
+        // Not using the below right now
         //return await connection.QuerySingleAsync<Movie>("INSERT INTO Movies (Title, Image, Rating, Comments) VALUES (@Title, @Image, @Rating, @Comments ) RETURNING *;", Movie);
 
+        // use this one ( MVP )
         return await connection.QuerySingleAsync<Movie>("INSERT INTO Movies (Title) VALUES (@Title) RETURNING *;", Movie);
     }
 }

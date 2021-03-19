@@ -1,25 +1,41 @@
+import { useAuth0 } from '@auth0/auth0-react';
+import React, { useState } from 'react';
+import useGetMovies from '../../hooks/UseGetMovies';
+import Button from '../Button';
+import FilmList from '../FilmList';
+import HomePage from '../HomePage';
+import SearchInput from '../SearchInput';
 import './App.css';
-
-import useGetMovies from "../../hooks/UseGetMovies";
+import UserList from "../UserList";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [ search, setSearch ] = useState('');
+
+	const { logout, isAuthenticated } = useAuth0();
+
+	const data = useGetMovies(search);
+
+	console.log('from the App:');
+	console.log(data);
+
+	return (
+		<div class="bg-image h-screen bg-cover bg-norepeat text-white">
+			{isAuthenticated && (
+				<div className='App'>
+					{' '}
+          <UserList/>
+					<Button name="Log Out" onClick={logout}/>
+					<SearchInput setValue={setSearch} />
+					<FilmList data={data}/>
+				</div>
+			)}
+      {
+        !isAuthenticated && (
+          <HomePage />
+        )
+      }
+		</div>
+	);
 }
 
 export default App;

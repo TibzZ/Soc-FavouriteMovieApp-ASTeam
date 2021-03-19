@@ -4,11 +4,11 @@
 
 ### Required:
 
-- Disney ideation
-- Auth0
-- React context
-- C# back end
-- At least one test
+- ~~Disney ideation~~
+- ~~Auth0~~
+- ~~React context~~ (Via Auth0)
+- ~~C# back end~~
+- ~~At least one test~~
 
 ### Bonus:
 
