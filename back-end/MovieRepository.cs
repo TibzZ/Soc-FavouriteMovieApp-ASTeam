@@ -28,9 +28,9 @@ public class MovieRepository : BaseRepository, IRepository<Movie>
     public async Task<Movie> Insert(Movie Movie)
     {
         using var connection = CreateConnection();
-        return await connection.QuerySingleAsync<Movie>("INSERT INTO Movies (Title, Image, Rating, Comments) VALUES (@Title, @Image, @Rating, @Comments ) RETURNING *;", Movie);
+        //return await connection.QuerySingleAsync<Movie>("INSERT INTO Movies (Title, Image, Rating, Comments) VALUES (@Title, @Image, @Rating, @Comments ) RETURNING *;", Movie);
 
-        //return await connection.QuerySingleAsync<Movie>("INSERT INTO Movies (Title) VALUES (@Title) RETURNING *;", Movie);
+        return await connection.QuerySingleAsync<Movie>("INSERT INTO Movies (Title) VALUES (@Title) RETURNING *;", Movie);
     }
 }
 
