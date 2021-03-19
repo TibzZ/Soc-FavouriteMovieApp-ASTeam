@@ -15,7 +15,7 @@ function FilmList({ data }) {
         console.log(filmTitle);
 	}
 	return (
-		<ul>
+		<ul class="bg-black o-8" >
 			{data &&
 				data.map((item, i) => (
 					<li key={i}>

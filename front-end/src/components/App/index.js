@@ -19,14 +19,14 @@ function App() {
 	console.log(data);
 
 	return (
-		<div>
+		<div class="bg-image h-screen bg-cover bg-norepeat text-white">
 			{isAuthenticated && (
 				<div className='App'>
 					{' '}
           <UserList/>
 					<Button name="Log Out" onClick={logout}/>
 					<SearchInput setValue={setSearch} />
-					<FilmList data={data} />
+					<FilmList data={data}/>
 				</div>
 			)}
       {
