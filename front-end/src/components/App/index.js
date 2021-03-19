@@ -13,8 +13,6 @@ function App() {
 
   const data = useGetMovies(search)
 
-console.log(data);
-
   function onClick() {
 
     throw Error();

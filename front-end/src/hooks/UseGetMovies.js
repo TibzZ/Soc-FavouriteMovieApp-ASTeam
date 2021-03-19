@@ -6,7 +6,7 @@ async function useGetMovies(search) {
 
     async function getData(){
         if (data === null) {
-            const res = await fetch(`https://imdb8.p.rapidapi.com/auto-complete?q=${searchString}`, {
+            const response = await fetch(`https://imdb8.p.rapidapi.com/auto-complete?q=${searchString}`, {
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-key": process.env.REACT_APP_X_RAPID_API_KEY,
@@ -14,9 +14,10 @@ async function useGetMovies(search) {
                 }
             }
             )
-            const resData = await res.json();
+            const resData = await response.json();
             console.log(resData);
-            await setData(resData.d)
+            setData(resData.d)
+            console.log(data)
         }
 
         }
