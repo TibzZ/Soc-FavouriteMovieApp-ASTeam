@@ -15,11 +15,8 @@ function useGetMovies(search) {
             }
             )
             const resData = await response.json();
-            console.log(resData);
+         
             setData(resData.d)
-            console.log(data)
-        
-
         }
         useEffect(() => getData(), [search]);
     

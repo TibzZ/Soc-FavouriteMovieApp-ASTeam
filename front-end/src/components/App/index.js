@@ -26,11 +26,10 @@ function App() {
   
   return (
     <div className="App">
-      
     <Button name={"Add Movie"} onClick={onClick}/>
     <Button name={"Save Movie"} onClick={onClick}/>
     
-    <SearchInput value={search} setValue={setSearch} />
+    <SearchInput setValue={setSearch} />
     <FilmList data={data}/>
 
     </div>
