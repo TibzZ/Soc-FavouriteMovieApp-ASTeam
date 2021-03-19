@@ -11,6 +11,33 @@ namespace back_end.Controllers
     [Route("[controller]")]
     public class MovieController : ControllerBase
     {
+    private readonly IRepository<Movie> _movieRepository;
+
+    public MovieController(IRepository<Movie> movieRepository)
+    {
+        _movieRepository = movieRepository;
     }
 
+    [HttpGet]
+    public async Task<IEnumerable<Movie>> GetAll()
+    {
+        return await _movieRepository.GetAll();
+    }
+
+
+    [HttpPost]
+    public async Task<IActionResult> Insert([FromBody] Movie movie)
+    {
+        try
+        {
+            var newMovie = await _movieRepository.Insert(movie);
+            return Created($"/movie/{movie.Id}", newMovie);
+        }
+        catch (Exception)
+        {
+            return BadRequest();
+        }
+    }
+
+    }
 }
