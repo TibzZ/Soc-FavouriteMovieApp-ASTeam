@@ -7,7 +7,7 @@ function SearchInput({setValue}) {
        // Clear the timeout if it has already been set.
       clearTimeout(timeout);
 
-    // Make a new timeout set to go off in 1000ms (1 second)
+    // Make a new timeout set to go off in 500ms (.5 second)
     timeout = setTimeout(function () {
         setValue(e.target.value);
     }, 500);
