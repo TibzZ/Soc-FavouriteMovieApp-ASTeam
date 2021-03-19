@@ -1,23 +1,36 @@
 import './App.css';
-
 import useGetMovies from "../../hooks/UseGetMovies";
+import Button from "../Button";
+import SearchInput from '../SearchInput';
+import React, {useState, useContext} from 'react';
+
+
 
 function App() {
+  
+  const [search, setSearch] = useState("");
+  //const [data, setData] = useState("");
+
+  const data = useGetMovies(search)
+
+console.log(data);
+
+  function onClick() {
+
+    throw Error();
+
+  }
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+    <Button name={"Add Movie"} onClick={onClick}/>
+    <Button name={"Save Movie"} onClick={onClick}/>
+    
+    <SearchInput value={search} setValue={setSearch} />
+
+
     </div>
   );
 }
