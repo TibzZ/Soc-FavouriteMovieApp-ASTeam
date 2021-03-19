@@ -5,14 +5,7 @@ function UserList() {
 	
     function getFilm() {
 
-		fetch('https://localhost:5001/movies', {
-			method  : 'POST',
-			body    : JSON.stringify(data),
-			headers : {
-				'Access-Control-Allow-Origin': '*',
-				'Content-type': 'application/json; charset=UTF-8',
-			},
-		})
+		fetch('https://localhost:5001/movies')
 			.then((response) => response.json())
 			.then((json) => setData(json))
 			.catch((err) => console.log(err));
