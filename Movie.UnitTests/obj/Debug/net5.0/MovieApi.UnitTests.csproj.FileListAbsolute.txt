@@ -1,0 +1,10 @@
+C:\bootcampSchoolOfCode\Projects\19_03_21\w11d5_levelupathon_hackathon-room9-allstars_whackitin\back-end\Movie.UnitTests\obj\Debug\net5.0\MovieApi.UnitTests.csprojAssemblyReference.cache
+C:\bootcampSchoolOfCode\Projects\19_03_21\w11d5_levelupathon_hackathon-room9-allstars_whackitin\back-end\Movie.UnitTests\obj\Debug\net5.0\MovieApi.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\bootcampSchoolOfCode\Projects\19_03_21\w11d5_levelupathon_hackathon-room9-allstars_whackitin\back-end\Movie.UnitTests\obj\Debug\net5.0\MovieApi.UnitTests.AssemblyInfoInputs.cache
+C:\bootcampSchoolOfCode\Projects\19_03_21\w11d5_levelupathon_hackathon-room9-allstars_whackitin\back-end\Movie.UnitTests\obj\Debug\net5.0\MovieApi.UnitTests.AssemblyInfo.cs
+C:\bootcampSchoolOfCode\Projects\19_03_21\w11d5_levelupathon_hackathon-room9-allstars_whackitin\back-end\Movie.UnitTests\obj\Debug\net5.0\MovieApi.UnitTests.csproj.CoreCompileInputs.cache
+C:\bootcampSchoolOfCode\Projects\19_03_21\w11d5_levelupathon_hackathon-room9-allstars_whackitin\Movie.UnitTests\obj\Debug\net5.0\MovieApi.UnitTests.csprojAssemblyReference.cache
+C:\bootcampSchoolOfCode\Projects\19_03_21\w11d5_levelupathon_hackathon-room9-allstars_whackitin\Movie.UnitTests\obj\Debug\net5.0\MovieApi.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\bootcampSchoolOfCode\Projects\19_03_21\w11d5_levelupathon_hackathon-room9-allstars_whackitin\Movie.UnitTests\obj\Debug\net5.0\MovieApi.UnitTests.AssemblyInfoInputs.cache
+C:\bootcampSchoolOfCode\Projects\19_03_21\w11d5_levelupathon_hackathon-room9-allstars_whackitin\Movie.UnitTests\obj\Debug\net5.0\MovieApi.UnitTests.AssemblyInfo.cs
+C:\bootcampSchoolOfCode\Projects\19_03_21\w11d5_levelupathon_hackathon-room9-allstars_whackitin\Movie.UnitTests\obj\Debug\net5.0\MovieApi.UnitTests.csproj.CoreCompileInputs.cache
