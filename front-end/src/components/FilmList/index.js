@@ -3,10 +3,16 @@ import Button from '../Button';
 
 function FilmList({ data }) {
 	function onClick(filmTitle) {
-		//this click will the send the film to our DB
-        //DO POST
+		console.log(JSON.stringify({ title: filmTitle }));
+        fetch('https://localhost:5001/movies', {
+            method: "POST",
+            body: JSON.stringify({title: filmTitle}),
+            headers: { "Content-type": "application/json; charset=UTF-8" }
+        })
+            .then(response => response.json())
+            .then(json => console.log(json))
+            .catch(err => console.log(err));
         console.log(filmTitle);
-        //Get film title
 	}
 	return (
 		<ul>
