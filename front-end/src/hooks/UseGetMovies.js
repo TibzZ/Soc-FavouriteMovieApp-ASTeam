@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 async function useGetMovies(search) {
     const searchString = search.replace(" ", "%20");
-    const [data, setData] = useState(null);
+    const [data, setData] = useState([]);
 
     async function getData(){
         if (data === null) {
@@ -15,8 +15,8 @@ async function useGetMovies(search) {
             }
             )
             const resData = await res.json();
-            
-            setData(resData)
+            console.log(resData);
+            await setData(resData.d)
         }
 
         }

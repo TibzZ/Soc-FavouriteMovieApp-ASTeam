@@ -3,7 +3,7 @@ import useGetMovies from "../../hooks/UseGetMovies";
 import Button from "../Button";
 import SearchInput from '../SearchInput';
 import React, {useState, useContext} from 'react';
-
+import FilmList from "../FilmList"
 
 
 function App() {
@@ -20,6 +20,7 @@ console.log(data);
     throw Error();
 
   }
+ 
 
   
   return (
@@ -29,7 +30,7 @@ console.log(data);
     <Button name={"Save Movie"} onClick={onClick}/>
     
     <SearchInput value={search} setValue={setSearch} />
-
+    <FilmList data={data}/>
 
     </div>
   );
