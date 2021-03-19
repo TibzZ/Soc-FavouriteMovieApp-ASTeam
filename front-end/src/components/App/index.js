@@ -6,6 +6,7 @@ import FilmList from '../FilmList';
 import HomePage from '../HomePage';
 import SearchInput from '../SearchInput';
 import './App.css';
+import UserList from "../UserList";
 
 function App() {
 	const [ search, setSearch ] = useState('');
@@ -22,6 +23,7 @@ function App() {
 			{isAuthenticated && (
 				<div className='App'>
 					{' '}
+          <UserList/>
 					<Button name="Log Out" onClick={logout}/>
 					<SearchInput setValue={setSearch} />
 					<FilmList data={data} />
