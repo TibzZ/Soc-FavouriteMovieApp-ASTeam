@@ -59,3 +59,4 @@ C:\socprojects\W11\w11d5_levelupathon_hackathon-room9-allstars_whackitin\back-en
 C:\socprojects\W11\w11d5_levelupathon_hackathon-room9-allstars_whackitin\back-end\obj\Debug\net5.0\back-end.pdb
 C:\socprojects\W11\w11d5_levelupathon_hackathon-room9-allstars_whackitin\back-end\obj\Debug\net5.0\back-end.genruntimeconfig.cache
 C:\bootcampSchoolOfCode\Projects\19_03_21\w11d5_levelupathon_hackathon-room9-allstars_whackitin\back-end\bin\Debug\net5.0\Dapper.dll
+C:\socprojects\W11\w11d5_levelupathon_hackathon-room9-allstars_whackitin\back-end\bin\Debug\net5.0\Dapper.dll

@@ -11,33 +11,49 @@ namespace back_end.Controllers
     [Route("[controller]s")]
     public class MovieController : ControllerBase
     {
-    private readonly IRepository<Movie> _movieRepository;
+        private readonly IRepository<Movie> _movieRepository;
 
-    public MovieController(IRepository<Movie> movieRepository)
-    {
-        _movieRepository = movieRepository;
-    }
-
-    [HttpGet]
-    public async Task<IEnumerable<Movie>> GetAll()
-    {
-        return await _movieRepository.GetAll();
-    }
-
-
-    [HttpPost]
-    public async Task<IActionResult> Insert([FromBody] Movie movie)
-    {
-        try
+        public MovieController(IRepository<Movie> movieRepository)
         {
-            var newMovie = await _movieRepository.Insert(movie);
-            return Created($"/movie/{movie.Id}", newMovie);
+            _movieRepository = movieRepository;
         }
-        catch (Exception)
+
+        [HttpGet]
+        public async Task<IEnumerable<Movie>> GetAll()
         {
-            return BadRequest();
+            return await _movieRepository.GetAll();
         }
-    }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            try
+            {
+                var movie = await _movieRepository.Get(id);
+                return Ok(movie);
+            }
+            catch (Exception)
+            {
+                return NotFound($"No such movie at {id}");
+            }
+        }
+
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> Insert([FromBody] Movie movie)
+        {
+            try
+            {
+                var newMovie = await _movieRepository.Insert(movie);
+                return Created($"/movies/{movie.Id}", newMovie);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
 
     }
 }
